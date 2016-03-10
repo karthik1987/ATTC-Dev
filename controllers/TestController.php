@@ -23,18 +23,18 @@ class TestController extends Controller
                     'delete' => ['post'],
                 ],
             ],
-			 'access' => [
-                        'class' => \yii\filters\AccessControl::className(),
-                        'only' => ['index','create','update','view'],
-                        'rules' => [
-                            // allow authenticated users
-                            [
-                                'allow' => true,
-                                'roles' => ['@'],
-                            ],
-                            // everything else is denied
-                        ],
-                    ],    
+			  'access' => [
+                         'class' => \yii\filters\AccessControl::className(),
+                         'only' => ['index','create','update','view'],
+                         'rules' => [
+                             // allow authenticated users
+                             [
+                                 'allow' => true,
+                                 'roles' => ['@'],
+                             ],
+                             // everything else is denied
+                         ],
+                     ],    
         ];
     }
 

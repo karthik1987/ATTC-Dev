@@ -19,7 +19,7 @@ a:focus {outline:none;}
 .log_form .form-control{ height:40px;}
 .form-group.last .cus_btn{ margin:0; float:left; padding: 9px 44px;}
 .log_form{ padding:20px 0px;}
-#footer{ margin:0; padding:0; float:left; width:100%; background:#965036;position:fixed; bottom:0; left:0; right:0;}
+#footer{ margin:0; padding:0; float:left; width:100%; background:#965036;position:fixed; bottom:0; left:0; right:0; z-index: 100}
 #footer p{ text-align:center; padding-top:10px; color:#fff;}
 .frm{ width:100%; margin:0; padding:0; float:left}
 .frm label, .frm input, .frm select{ width:100%; margin:0; padding:0px 5px; float:left;}
@@ -35,7 +35,7 @@ a:focus {outline:none;}
 .menu .navbar-default .navbar-toggle .icon-bar{ background:#fff;}
 .cus_btn:active, .cus_btn:hover{ background:none}
 .btn:active{ color:#000 !important}
-a, a:hover{ text-decoration:none; color:#fff;}
+a, a:hover{ text-decoration:none; color:#000;}
 
 @media screen and ( max-width:991px)
 {

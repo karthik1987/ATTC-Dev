@@ -10,7 +10,7 @@ $this->title = $model->TM_Test_Id;
 $this->params['breadcrumbs'][] = ['label' => 'Tests', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="test-view">
+<div class="container">
 
     <h1><?= Html::encode($this->title) ?></h1>
 

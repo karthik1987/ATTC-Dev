@@ -10,7 +10,7 @@ $this->title = 'Create Test';
 $this->params['breadcrumbs'][] = ['label' => 'Tests', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="test-create">
+<div class="container">
 
     <h1><?= Html::encode($this->title) ?></h1>
 

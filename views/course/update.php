@@ -10,7 +10,7 @@ $this->params['breadcrumbs'][] = ['label' => 'Courses', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->CRM_Course_Code, 'url' => ['view', 'id' => $model->CRM_Course_Code]];
 $this->params['breadcrumbs'][] = 'Update';
 ?>
-<div class="course-update">
+<div class="container">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
