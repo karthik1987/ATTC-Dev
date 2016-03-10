@@ -8,7 +8,6 @@ use yii\web\Controller;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
-use app\models\ClientMaster;
 
 class SiteController extends Controller
 {
@@ -53,7 +52,7 @@ class SiteController extends Controller
         return $this->render('index');
     }
 
-    public function actionClient()
+    public function actionLogin()
     {
         if (!\Yii::$app->user->isGuest) {
             return $this->goHome();
@@ -63,22 +62,7 @@ class SiteController extends Controller
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
             return $this->goBack();
         }
-        return $this->render('client', [
-            'model' => $model,
-        ]);
-    }
-    
-    public function actionAdmin()
-    {
-        if (!\Yii::$app->user->isGuest) {
-            return $this->goHome();
-        }
-
-        $model = new LoginForm();
-        if ($model->load(Yii::$app->request->post()) && $model->login()) {
-            return $this->goBack();
-        }
-        return $this->render('admin', [
+        return $this->render('login', [
             'model' => $model,
         ]);
     }
@@ -106,28 +90,5 @@ class SiteController extends Controller
     public function actionAbout()
     {
         return $this->render('about');
-    }
-    
-    public function actionRegistration()
-    {
-        $model = new ClientMaster();
-
-        if ($model->load(Yii::$app->request->post())) 
-        {
-            $model->save();
-            return $this->redirect(['index', 'msg' => 'success']);
-        } 
-        else 
-        {
-            return $this->render('registration', [
-                'model' => $model,
-            ]);
-        }
-    }
-    
-    public function actionOtpVerify()
-    {
-        $renderMethod = Yii::$app->request->isAjax ? 'renderAjax' : 'render';
-        return $this->$renderMethod('otp_verify');
     }
 }
